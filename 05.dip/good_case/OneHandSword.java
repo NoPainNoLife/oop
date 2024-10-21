@@ -1,0 +1,21 @@
+import java.util.Random;
+
+public class OneHandSword implements Weapon {
+    private final String NAME;
+    private final int DAMAGE;
+
+    public OneHandSword(String name, int damage) {
+        this.NAME = name;
+        this.DAMAGE = damage;
+    }
+
+    @Override
+    public int attack() {
+        return DAMAGE + new Random().nextInt(10) - 5;
+    }
+
+    @Override
+    public String toString() {
+        return NAME;
+    }
+}
